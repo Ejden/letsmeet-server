@@ -1,0 +1,24 @@
+plugins {
+    id 'org.springframework.boot' version '2.4.4'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+group = 'pl.stypinskiadrian'
+version = '0.0.1'
+sourceCompatibility = '11'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.jetbrains:annotations:20.1.0'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '2.4.4'
+}
+
+test {
+    useJUnitPlatform()
+}
